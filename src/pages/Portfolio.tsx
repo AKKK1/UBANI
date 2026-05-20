@@ -5,10 +5,10 @@ import { SpotlightCard } from '../components/SpotlightCard';
 import { Github } from 'lucide-react';
 
 const projects = [
-  { img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop", name: "Gamitsvale.GE", repo: "gamitsvale-ge", tags: ["Next.js", "React", "TailwindCSS"] },
-  { img: "https://images.unsplash.com/photo-1618761714954-0b8cd0026356?q=80&w=2670&auto=format&fit=crop", name: "TRA.DE", repo: "trade-platform", tags: ["Node.js", "WebSockets", "Finance"] },
-  { img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2670&auto=format&fit=crop", name: "TURISTPAYLOAD", repo: "turistpayload", tags: ["React Native", "Firebase", "Maps"] },
-  { img: "https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=2670&auto=format&fit=crop", name: "GALAXY PORTFOLIO", repo: "galaxy-portfolio", tags: ["Three.js", "Framer Motion", "WebGL"] }
+  { img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop", name: "Gamitsvale.GE", link: "https://gamitsvale.ge", repo: "gamitsvale-ge", tags: ["Next.js", "React", "TailwindCSS"] },
+  { img: "https://images.unsplash.com/photo-1618761714954-0b8cd0026356?q=80&w=2670&auto=format&fit=crop", name: "TRA.DE", link: "https://github.com/legenderl2fun/trade-platform", repo: "trade-platform", tags: ["Node.js", "WebSockets", "Finance"] },
+  { img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2670&auto=format&fit=crop", name: "TURISTPAYLOAD", link: "https://github.com/legenderl2fun/turistpayload", repo: "turistpayload", tags: ["React Native", "Firebase", "Maps"] },
+  { img: "https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=2670&auto=format&fit=crop", name: "GALAXY PORTFOLIO", link: "https://github.com/legenderl2fun/galaxy-portfolio", repo: "galaxy-portfolio", tags: ["Three.js", "Framer Motion", "WebGL"] }
 ];
 
 export function Portfolio() {
@@ -34,7 +34,7 @@ export function Portfolio() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {projects.map((p, idx) => (
             <AnimatedReveal key={idx} delay={idx * 0.1}>
-              <div className="p-0 border border-white/10 group cursor-pointer h-[400px] flex flex-col justify-end relative bg-[#111] overflow-hidden hover:border-green-400 transition-colors">
+              <a href={p.link} target="_blank" rel="noreferrer" className="p-0 border border-white/10 group cursor-pointer h-[400px] flex flex-col justify-end relative bg-[#111] overflow-hidden hover:border-green-400 transition-colors block">
                 {/* Background Image Layer */}
                 <div className="absolute inset-0">
                   <img src={p.img} alt={p.name} className="w-full h-full object-cover opacity-30 group-hover:opacity-60 transition duration-700 grayscale group-hover:grayscale-0" />
@@ -61,7 +61,7 @@ export function Portfolio() {
                       +
                    </div>
                 </div>
-              </div>
+              </a>
             </AnimatedReveal>
           ))}
         </div>

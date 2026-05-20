@@ -1,7 +1,7 @@
 import React from 'react';
 import { agencyConfig } from '../config/data';
 import { useLang } from '../context/LangContext';
-import { Instagram, Github, MessageCircle } from 'lucide-react';
+import { Instagram, Github, MessageCircle, Linkedin, Facebook } from 'lucide-react';
 
 export function Footer() {
   const { t } = useLang();
@@ -24,9 +24,15 @@ export function Footer() {
       </div>
       
       <div className="col-span-1 md:col-span-3 flex justify-start md:justify-end flex-col mt-4 md:mt-0 text-[10px] font-mono uppercase gap-2">
-        <div className="flex gap-4 opacity-80 mb-2">
+        <div className="flex gap-4 opacity-80 mb-2 flex-wrap">
            <a href={agencyConfig.internal.socials.whatsapp} target="_blank" rel="noreferrer" className="hover:text-green-400 transition-colors flex items-center gap-1">
              <MessageCircle className="w-3 h-3" /> WA
+           </a>
+           <a href={agencyConfig.internal.socials.linkedin} target="_blank" rel="noreferrer" className="hover:text-green-400 transition-colors flex items-center gap-1">
+             <Linkedin className="w-3 h-3" /> IN
+           </a>
+           <a href={agencyConfig.internal.socials.facebook} target="_blank" rel="noreferrer" className="hover:text-green-400 transition-colors flex items-center gap-1">
+             <Facebook className="w-3 h-3" /> FB
            </a>
            <a href={agencyConfig.internal.socials.instagram} target="_blank" rel="noreferrer" className="hover:text-green-400 transition-colors flex items-center gap-1">
              <Instagram className="w-3 h-3" /> IG

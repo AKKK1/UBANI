@@ -9,6 +9,8 @@ export const agencyConfig = {
       whatsapp: "https://wa.me/995593716080",
       instagram: "https://instagram.com/your_handle",
       github: "https://github.com/legenderl2fun",
+      linkedin: "https://linkedin.com/in/your_profile",
+      facebook: "https://facebook.com/your_page"
     }
   },
 

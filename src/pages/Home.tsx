@@ -4,9 +4,27 @@ import { useLang } from '../context/LangContext';
 import { AnimatedReveal } from '../components/AnimatedReveal';
 import { Link } from 'react-router-dom';
 import { agencyConfig } from '../config/data';
+import { Share2 } from 'lucide-react';
 
 export function Home() {
   const { lang, t } = useLang();
+
+  const handleShare = async () => {
+    if (navigator.share) {
+      try {
+        await navigator.share({
+          title: t('Premium Web Development Agency', 'პრემიუმ ვებ სააგენტო'),
+          text: t('Check out our digital services and AI integration.', 'ნახეთ ჩვენი ციფრული სერვისები და AI ინტეგრაცია.'),
+          url: window.location.href,
+        });
+      } catch (err) {
+        console.error('Error sharing', err);
+      }
+    } else {
+      navigator.clipboard.writeText(window.location.href);
+      alert(t('Link copied to clipboard!', 'ბმული დაკოპირებულია!'));
+    }
+  };
 
   return (
     <div className="pt-20 lg:h-screen lg:min-h-[800px] flex flex-col">
@@ -42,9 +60,26 @@ export function Home() {
                 )}
               </p>
             </AnimatedReveal>
+
+            <AnimatedReveal delay={0.3}>
+              <div className="mt-8 flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6">
+                <div className="flex gap-4">
+                  <Link to="/services" className="inline-flex items-center justify-center px-8 py-4 bg-green-400 text-black font-black uppercase text-[10px] tracking-widest hover:bg-white hover:text-black transition-colors">
+                    {t("Explore Our Services", "ჩვენი სერვისები")}
+                  </Link>
+                  <button onClick={handleShare} className="inline-flex items-center justify-center px-4 py-4 bg-[#111] border border-white/10 text-white font-black hover:border-green-400/50 hover:text-green-400 transition-colors" title={t("Share", "გაზიარება")}>
+                    <Share2 className="w-5 h-5" />
+                  </button>
+                </div>
+                <div className="text-[10px] font-mono opacity-80 uppercase leading-relaxed text-white">
+                  {agencyConfig.internal.phone}<br/>
+                  {agencyConfig.internal.adminEmail}
+                </div>
+              </div>
+            </AnimatedReveal>
           </div>
 
-          <AnimatedReveal delay={0.3}>
+          <AnimatedReveal delay={0.4}>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 mt-12 pb-4 lg:pb-10 relative z-10">
               <div className="border-l-[2px] border-green-400 pl-4">
                 <div className="text-2xl font-bold font-mono text-white">AI</div>

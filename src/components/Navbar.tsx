@@ -14,8 +14,8 @@ export function Navbar() {
     { path: '/services', label: t('Services & Pricing', 'სერვისები და ფასები') },
     { path: '/process', label: t('How We Build', 'პროცესი') },
     { path: '/portfolio', label: t('Portfolio', 'პორტფოლიო') },
-    { path: '/offers', label: t('Special Offers', 'აქციები') },
     { path: '/blog', label: t('Blog', 'ბლოგი') },
+    { path: '/contact', label: t('Contact', 'კონტაქტი') },
   ];
 
   return (
