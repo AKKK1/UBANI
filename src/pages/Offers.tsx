@@ -3,6 +3,7 @@ import { useLang } from '../context/LangContext';
 import { AnimatedReveal } from '../components/AnimatedReveal';
 import { SpotlightCard } from '../components/SpotlightCard';
 import { agencyConfig } from '../config/data';
+import { Link } from 'react-router-dom';
 
 export function Offers() {
   const { lang, t } = useLang();
@@ -27,7 +28,7 @@ export function Offers() {
         <div className="space-y-4">
           {agencyConfig.offers.filter(o => o.active).map((offer, idx) => (
              <AnimatedReveal key={offer.id} delay={idx * 0.1}>
-                <div className="group bg-[#111] border border-white/5 p-6 flex flex-col md:flex-row justify-between items-start md:items-center hover:border-green-400/50 transition-colors">
+                <Link to={`/offers/${offer.id}`} className="group bg-[#111] border border-white/5 p-6 flex flex-col md:flex-row justify-between items-start md:items-center hover:border-green-400/50 transition-colors block">
                   <div className="mb-4 md:mb-0">
                     <span className="text-[10px] font-mono tracking-[0.3em] uppercase py-1 text-green-400 block mb-2">
                        {offer.tag}
@@ -40,19 +41,19 @@ export function Offers() {
                     </p>
                   </div>
                   <div className="text-right flex md:flex-col items-center md:items-end justify-between w-full md:w-auto mt-4 md:mt-0 gap-4 md:gap-0">
-                    <button className="px-4 py-2 border border-white/20 text-[10px] font-black uppercase text-white hover:bg-white hover:text-black transition-colors block md:hidden">
-                       {t("Claim Offer", "აქციის გამოყენება")}
-                    </button>
+                    <div className="px-4 py-2 border border-white/20 text-[10px] font-black uppercase text-white hover:bg-white hover:text-black transition-colors block md:hidden">
+                       {t("View Details", "დეტალურად")}
+                    </div>
                     <div className="flex bg-green-400 text-black px-2 py-1 items-center gap-2 md:mb-2 w-max">
                       <span className="text-sm md:text-2xl font-mono font-black tracking-tighter">
                         -{offer.discount}%
                       </span>
                     </div>
-                    <button className="px-4 py-2 border border-white/20 text-[10px] font-black uppercase text-white hover:bg-white hover:text-black transition-colors hidden md:block">
-                      {t("Claim Offer", "აქციის გამოყენება")}
-                    </button>
+                    <div className="px-4 py-2 border border-white/20 text-[10px] font-black uppercase text-white hover:bg-white hover:text-black transition-colors hidden md:block">
+                      {t("View Details", "დეტალურად")}
+                    </div>
                   </div>
-                </div>
+                </Link>
              </AnimatedReveal>
           ))}
         </div>

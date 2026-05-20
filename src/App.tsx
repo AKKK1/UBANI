@@ -10,7 +10,9 @@ import { ServicesPricing } from './pages/ServicesPricing';
 import { Process } from './pages/Process';
 import { Portfolio } from './pages/Portfolio';
 import { Offers } from './pages/Offers';
+import { OfferDetails } from './pages/OfferDetails';
 import { Blog } from './pages/Blog';
+import { BlogPost } from './pages/BlogPost';
 
 export default function App() {
   return (
@@ -23,7 +25,9 @@ export default function App() {
             <Route path="/process" element={<Process />} />
             <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/offers" element={<Offers />} />
+            <Route path="/offers/:id" element={<OfferDetails />} />
             <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:id" element={<BlogPost />} />
           </Routes>
         </Layout>
       </BrowserRouter>

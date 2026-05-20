@@ -2,12 +2,13 @@ import React from 'react';
 import { useLang } from '../context/LangContext';
 import { AnimatedReveal } from '../components/AnimatedReveal';
 import { SpotlightCard } from '../components/SpotlightCard';
+import { Github } from 'lucide-react';
 
 const projects = [
-  { img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop", name: "Fintech Dashboard", tags: ["React", "D3.js"] },
-  { img: "https://images.unsplash.com/photo-1618761714954-0b8cd0026356?q=80&w=2670&auto=format&fit=crop", name: "AI Analytics Platform", tags: ["Next.js", "Python"] },
-  { img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2670&auto=format&fit=crop", name: "E-Commerce System", tags: ["Shopify", "Tailwind"] },
-  { img: "https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=2670&auto=format&fit=crop", name: "Real Estate Portal", tags: ["GCP", "Maps API"] }
+  { img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop", name: "Gamitsvale.GE", repo: "gamitsvale-ge", tags: ["Next.js", "React", "TailwindCSS"] },
+  { img: "https://images.unsplash.com/photo-1618761714954-0b8cd0026356?q=80&w=2670&auto=format&fit=crop", name: "TRA.DE", repo: "trade-platform", tags: ["Node.js", "WebSockets", "Finance"] },
+  { img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2670&auto=format&fit=crop", name: "TURISTPAYLOAD", repo: "turistpayload", tags: ["React Native", "Firebase", "Maps"] },
+  { img: "https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=2670&auto=format&fit=crop", name: "GALAXY PORTFOLIO", repo: "galaxy-portfolio", tags: ["Three.js", "Framer Motion", "WebGL"] }
 ];
 
 export function Portfolio() {
@@ -42,14 +43,18 @@ export function Portfolio() {
                 
                 {/* Content Layer */}
                 <div className="relative z-10 p-8 flex justify-between items-end">
-                   <div>
+                   <div className="flex-1">
                      <h3 className="text-2xl font-black font-sans uppercase mb-4 text-white group-hover:text-green-400 transition-colors">{p.name}</h3>
-                     <div className="flex gap-2">
+                     <div className="flex flex-wrap gap-2 mb-4">
                        {p.tags.map(t => (
                          <span key={t} className="text-[10px] uppercase font-bold tracking-widest px-3 py-1 border border-white/20 bg-black/50 text-white">
                            {t}
                          </span>
                        ))}
+                     </div>
+                     <div className="flex items-center gap-2 text-white/50 group-hover:text-white transition-colors">
+                       <Github className="w-4 h-4" />
+                       <span className="text-[10px] font-mono tracking-widest">github.com/{p.repo}</span>
                      </div>
                    </div>
                    <div className="w-12 h-12 flex items-center justify-center border border-white/20 text-white font-black bg-black/50 backdrop-blur-sm shrink-0">

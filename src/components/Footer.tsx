@@ -1,7 +1,7 @@
 import React from 'react';
 import { agencyConfig } from '../config/data';
 import { useLang } from '../context/LangContext';
-import { MapPin, Mail, Phone } from 'lucide-react';
+import { Instagram, Github, MessageCircle } from 'lucide-react';
 
 export function Footer() {
   const { t } = useLang();
@@ -23,9 +23,22 @@ export function Footer() {
         </div>
       </div>
       
-      <div className="col-span-1 md:col-span-3 flex justify-start md:justify-end flex-col mt-4 md:mt-0 text-[10px] font-mono opacity-80 uppercase">
-        <span>+995 593 716 080</span>
-        <span>AC3AK1@gmail.com</span>
+      <div className="col-span-1 md:col-span-3 flex justify-start md:justify-end flex-col mt-4 md:mt-0 text-[10px] font-mono uppercase gap-2">
+        <div className="flex gap-4 opacity-80 mb-2">
+           <a href={agencyConfig.internal.socials.whatsapp} target="_blank" rel="noreferrer" className="hover:text-green-400 transition-colors flex items-center gap-1">
+             <MessageCircle className="w-3 h-3" /> WA
+           </a>
+           <a href={agencyConfig.internal.socials.instagram} target="_blank" rel="noreferrer" className="hover:text-green-400 transition-colors flex items-center gap-1">
+             <Instagram className="w-3 h-3" /> IG
+           </a>
+           <a href={agencyConfig.internal.socials.github} target="_blank" rel="noreferrer" className="hover:text-green-400 transition-colors flex items-center gap-1">
+             <Github className="w-3 h-3" /> GH
+           </a>
+        </div>
+        <div className="opacity-50">
+          <span>{agencyConfig.internal.phone}</span><br />
+          <span>{agencyConfig.internal.adminEmail}</span>
+        </div>
       </div>
     </footer>
   );
