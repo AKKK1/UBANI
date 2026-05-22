@@ -2,9 +2,9 @@ export const agencyConfig = {
   internal: {
     adminEmail: "AC3AK1@gmail.com",
     phone: "+995 593 71 60 80",
-    origin: "Munich, Germany",
+    origin: "Europe",
     location: "Tbilisi, Georgia",
-    experience: "10 Years of Engineering & Design",
+    experience: "European-standard Engineering & Design",
     socials: {
       whatsapp: "https://wa.me/995593716080",
       instagram: "https://instagram.com/your_handle",
@@ -17,9 +17,17 @@ export const agencyConfig = {
   offers: [
     {
       id: "premium-landing",
-      discount: 40,
+      discount: 70,
       active: true,
       tag: "Top Choice",
+      oldPriceLabel: {
+        en: "1,000 GEL",
+        ge: "1000 ₾"
+      },
+      priceLabel: {
+        en: "300 GEL",
+        ge: "300 ₾"
+      },
       en: {
         title: "Premium Website Development",
         desc: "High-end website built from scratch including design, domain, server deployment, and guided training.",
@@ -47,9 +55,17 @@ export const agencyConfig = {
     },
     {
       id: "design-creation",
-      discount: 25,
+      discount: 75,
       active: true,
       tag: "Creative",
+      oldPriceLabel: {
+        en: "800 GEL",
+        ge: "800 ₾"
+      },
+      priceLabel: {
+        en: "200 GEL",
+        ge: "200 ₾"
+      },
       en: {
         title: "UI/UX & Design Creation",
         desc: "Pixel-perfect modern digital product design, wireframing, and branding before writing any code.",
@@ -78,6 +94,14 @@ export const agencyConfig = {
       discount: 50,
       active: true,
       tag: "Growth",
+      oldPriceLabel: {
+        en: "500 GEL",
+        ge: "500 ₾"
+      },
+      priceLabel: {
+        en: "250 GEL",
+        ge: "250 ₾"
+      },
       en: {
         title: "Page SEO & Traffic Boost",
         desc: "Massive scaling of your user traffic through Technical SEO optimization and strategic rankings.",
@@ -136,7 +160,7 @@ export const agencyConfig = {
       icon: "Figma",
       en: {
         title: "UI/UX & Design Systems",
-        desc: "Premium, Munich-grade aesthetics. We design intuitive, beautiful, and accessible modern interfaces."
+        desc: "European-standard aesthetics tailored for Georgian users. We design intuitive, beautiful, and accessible modern interfaces."
       },
       ge: {
         title: "UI/UX დიზაინი",
@@ -191,7 +215,7 @@ export const agencyConfig = {
   ],
   
   seoKeywords: {
-    en: ["Digital Agency Tbilisi", "Web Development Georgia", "Custom Software", "Next.js", "AI Integration", "Premium UI/UX"],
+    en: ["Website Development Georgia", "Web Development Tbilisi", "Digital Agency Georgia", "Custom Software", "SEO Georgia", "AI Integration", "Premium UI/UX"],
     ge: ["საიტის პროგრამისტი", "ვებ საიტის აწყობა", "საიტების დამზადება", "SEO გუგლის რანკინგი", "AI ინტეგრაცია"]
   },
 
@@ -202,7 +226,7 @@ export const agencyConfig = {
       en: {
         title: "How to Rank in Google in 2024",
         desc: "Best practices for technical SEO, web development strategies, and ranking in modern search engines.",
-        content: "Ranking on Google requires more than just keywords today. It demands robust web development practices, high speed, and a semantic HTML structure.\n\nHiring a professional web developer ensures that your site is built with modern stacks like Next.js, handling server-side rendering natively, which Google bots love.\n\nFrom our 10 years of Munich experience, we have learned that SEO is intrinsically tied to clean code. Don't rely on heavy templates—build custom, performance-focused platforms."
+        content: "Ranking on Google requires more than just keywords today. It demands robust web development practices, high speed, and a semantic HTML structure.\n\nFor Georgian businesses, strong SEO starts with clear service pages, local search intent, fast loading, and content that answers what customers actually search for: website development, online store creation, SEO, and business automation.\n\nEuropean-standard execution means clean code, fast interfaces, measurable conversions, and a platform that can grow with your company. Don't rely on heavy templates—build custom, performance-focused platforms."
       },
       ge: {
         title: "როგორ მოვხვდეთ გუგლის პირველ გვერდზე",
@@ -314,7 +338,7 @@ export const agencyConfig = {
       en: {
         title: "The Anatomy of High-Converting UI/UX",
         desc: "Aesthetic is important, but frictionless user journeys generate revenue.",
-        content: "Design is not just how it looks; it is how it works. A confusing checkout flow destroys a beautiful landing page layout.\n\nOur Munich-centered design principles focus on minimalism, stark contrasts, and clear Call-To-Actions (CTAs) that guide users effortlessly to conversion points."
+        content: "Design is not just how it looks; it is how it works. A confusing checkout flow destroys a beautiful landing page layout.\n\nOur European-standard design principles are adapted for Georgia: clear messaging, fast decision paths, strong mobile layouts, and calls to action that help visitors become real leads."
       },
       ge: {
         title: "რა არის UI/UX დიზაინი გაყიდვების გასაზრდელად?",

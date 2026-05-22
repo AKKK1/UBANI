@@ -33,21 +33,21 @@ export function Home() {
         {/* Left Side: Hero Section */}
         <section className="lg:col-span-7 bg-[#050505] p-6 sm:p-10 flex flex-col justify-between relative overflow-hidden h-full min-h-[500px]">
           <div className="absolute -left-10 top-20 opacity-[0.03] text-[120px] lg:text-[180px] font-black pointer-events-none whitespace-nowrap">
-            MUNICH
+            EUROPE
           </div>
           
           <div className="relative z-10 pt-4 lg:pt-10">
             <AnimatedReveal>
               <div className="inline-block px-3 py-1 bg-green-400 text-black text-[10px] font-black uppercase tracking-tighter mb-6">
-                {t("10 Years of Engineering", "10-წლიანი გამოცდილება")}
+                  {t("European-standard web development", "ევროპული სტანდარტის ვებ დეველოპმენტი")}
               </div>
             </AnimatedReveal>
 
             <AnimatedReveal delay={0.1}>
               <h1 className="text-[54px] sm:text-[64px] lg:text-[84px] leading-[0.85] font-black tracking-tighter uppercase mb-6 font-display">
-                Digital<br/>Architecture<br/>
+                Web<br/>Development<br/>
                 <span className="text-transparent border-t-4 border-green-400 pt-4 block w-max mt-4" style={{ WebkitTextStroke: '1px white' }}>
-                  {t("From Munich", "გერმანიიდან")}
+                  {t("For Georgia", "საქართველოსთვის")}
                 </span>
               </h1>
             </AnimatedReveal>
@@ -55,8 +55,8 @@ export function Home() {
             <AnimatedReveal delay={0.2}>
               <p className="text-lg opacity-60 max-w-md leading-relaxed italic font-serif text-white">
                 {t(
-                  "German engineering experience in Georgia. We build high-performance scalable software solutions and integrate AI workflows.",
-                  "გერმანული გამოცდილება საქართველოში. ჩვენ ვაშენებთ პროგრამულ გადაწყვეტებს და AI ინტეგრაციებს."
+                  "European-standard websites, web applications, SEO, and AI integrations tailored for Georgian businesses that want more leads, sales, and trust online.",
+                  "ვქმნით სწრაფ საიტებს, ვებ აპლიკაციებს, SEO სტრატეგიას და AI ინტეგრაციებს საქართველოში ბიზნესებისთვის, რომლებსაც სჭირდებათ მეტი კლიენტი, გაყიდვები და ნდობა ონლაინ."
                 )}
               </p>
             </AnimatedReveal>
@@ -65,7 +65,7 @@ export function Home() {
               <div className="mt-8 flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6">
                 <div className="flex gap-4">
                   <Link to="/services" className="inline-flex items-center justify-center px-8 py-4 bg-green-400 text-black font-black uppercase text-[10px] tracking-widest hover:bg-white hover:text-black transition-colors">
-                    {t("Explore Our Services", "ჩვენი სერვისები")}
+                    {t("Build My Website", "საიტის დამზადება")}
                   </Link>
                   <button onClick={handleShare} className="inline-flex items-center justify-center px-4 py-4 bg-[#111] border border-white/10 text-white font-black hover:border-green-400/50 hover:text-green-400 transition-colors" title={t("Share", "გაზიარება")}>
                     <Share2 className="w-5 h-5" />
@@ -103,9 +103,14 @@ export function Home() {
           <div className="p-6 sm:p-8 flex-1 overflow-y-auto">
             <AnimatedReveal delay={0.2}>
               <div className="flex justify-between items-center mb-6">
-                <h2 className="text-[11px] uppercase tracking-[0.4em] font-bold text-green-400">
-                  {t("Exclusive Offers", "შეთავაზებები")}
-                </h2>
+                <div>
+                  <h2 className="text-[11px] uppercase tracking-[0.4em] font-bold text-green-400">
+                    ექსკლუზიური შეთავაზება
+                  </h2>
+                  <p className="mt-2 text-[10px] uppercase tracking-[0.25em] font-bold text-white/40">
+                    მხოლოდ ქართველებისთვის
+                  </p>
+                </div>
                 <Link to="/offers" className="text-[10px] uppercase font-bold text-white/50 border border-white/10 px-2 py-1 hover:text-white hover:border-white/40 transition-colors">
                   {t("View All", "ყველა")}
                 </Link>
@@ -113,14 +118,23 @@ export function Home() {
               
               <div className="space-y-4">
                 {agencyConfig.offers.slice(0, 3).map((offer, idx) => (
-                  <Link to={`/offers/${offer.id}`} key={offer.id} className="group bg-[#111] border border-white/5 p-4 flex justify-between items-center hover:border-green-400/50 transition-colors cursor-pointer w-full">
-                    <div>
+                  <Link to={`/offers/${offer.id}`} key={offer.id} className="group bg-[#111] border border-white/5 p-4 flex justify-between gap-4 items-center hover:border-green-400/50 transition-colors cursor-pointer w-full">
+                    <div className="min-w-0">
                       <h3 className="font-bold text-sm uppercase text-white group-hover:text-green-400 transition-colors">{offer[lang].title}</h3>
                       <p className="text-[10px] opacity-40 uppercase line-clamp-1 max-w-[150px] sm:max-w-[200px] mt-1">{offer[lang].desc}</p>
                     </div>
-                    <div className="text-right">
-                      <div className="text-xs line-through opacity-30">~{offer.discount * 100} GEL</div>
-                      <div className="text-xl font-mono text-green-400 font-bold shrink-0">-{offer.discount}%</div>
+                    <div className="shrink-0 flex items-center gap-3">
+                      <div className="text-right">
+                        <div className="text-xs line-through opacity-30 font-mono">
+                          {offer.oldPriceLabel[lang]}
+                        </div>
+                        <div className="text-xl font-mono text-green-400 font-bold">
+                          {offer.priceLabel[lang]}
+                        </div>
+                      </div>
+                      <div className="text-xl font-mono text-green-400 font-bold shrink-0">
+                        -{offer.discount}%
+                      </div>
                     </div>
                   </Link>
                 ))}
