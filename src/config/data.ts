@@ -21,11 +21,11 @@ export const agencyConfig = {
       active: true,
       tag: "Top Choice",
       oldPriceLabel: {
-        en: "1,000 GEL",
-        ge: "1000 ₾"
+        en: "1,500 $",
+        ge: "1000 $"
       },
       priceLabel: {
-        en: "300 GEL",
+        en: "300 $",
         ge: "300 ₾"
       },
       en: {
@@ -59,12 +59,12 @@ export const agencyConfig = {
       active: true,
       tag: "Creative",
       oldPriceLabel: {
-        en: "800 GEL",
-        ge: "800 ₾"
+        en: "1,000 $",
+        ge: "1000 $"
       },
       priceLabel: {
-        en: "200 GEL",
-        ge: "200 ₾"
+        en: "300 $",
+        ge: "300 ₾"
       },
       en: {
         title: "UI/UX & Design Creation",
@@ -95,12 +95,12 @@ export const agencyConfig = {
       active: true,
       tag: "Growth",
       oldPriceLabel: {
-        en: "500 GEL",
-        ge: "500 ₾"
+        en: "100 0$",
+        ge: "1000 $"
       },
       priceLabel: {
-        en: "250 GEL",
-        ge: "250 ₾"
+        en: "500 + $",
+        ge: "300 + ₾"
       },
       en: {
         title: "Page SEO & Traffic Boost",
