@@ -4,12 +4,21 @@ import { AnimatedReveal } from '../components/AnimatedReveal';
 import { agencyConfig } from '../config/data';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { Seo } from '../components/Seo';
 
 export function Blog() {
   const { lang, t } = useLang();
 
   return (
     <div className="min-h-screen pt-32 pb-20 px-6">
+      <Seo
+        title={t("ბლოგი | UBANI", "ბლოგი | UBANI")}
+        description={t(
+          "სტატიები ვებ დეველოპმენტზე, SEO-ზე, AI ინტეგრაციებზე, საიტის სისწრაფეზე და ციფრული ბიზნესის ზრდაზე საქართველოში.",
+          "სტატიები ვებ დეველოპმენტზე, SEO-ზე, AI ინტეგრაციებზე, საიტის სისწრაფეზე და ციფრული ბიზნესის ზრდაზე საქართველოში."
+        )}
+        path="/blog"
+      />
       <div className="max-w-4xl mx-auto">
         <AnimatedReveal>
            <h2 className="text-[11px] uppercase tracking-[0.4em] font-bold text-green-400 mb-6">

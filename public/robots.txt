@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ubani.ge/sitemap.xml
+Sitemap: https://ubani.website/sitemap.xml

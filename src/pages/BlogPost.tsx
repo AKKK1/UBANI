@@ -4,6 +4,9 @@ import { useLang } from '../context/LangContext';
 import { agencyConfig } from '../config/data';
 import { AnimatedReveal } from '../components/AnimatedReveal';
 import { ArrowLeft, Share2 } from 'lucide-react';
+import { Seo } from '../components/Seo';
+import { siteSeo } from '../config/seo';
+import { blogContentExtensions } from '../config/blogContent';
 
 export function BlogPost() {
   const { id } = useParams();
@@ -18,7 +21,11 @@ export function BlogPost() {
   if (!post) return <Navigate to="/blog" />;
 
   // Quick type cast as data.ts schema has content now
-  const paragraphs = ((post[lang] as any).content || "").split('\n\n');
+  const fullContent = [
+    (post[lang] as any).content || "",
+    blogContentExtensions[post.id]?.[lang] || "",
+  ].filter(Boolean).join('\n\n');
+  const paragraphs = fullContent.split('\n\n');
 
   const handleShare = async () => {
     if (navigator.share) {
@@ -39,6 +46,13 @@ export function BlogPost() {
 
   return (
     <div className="min-h-screen pt-32 pb-20 px-6">
+      <Seo
+        title={`${post[lang].title} | ${siteSeo.name}`}
+        description={post[lang].desc}
+        path={`/blog/${post.id}`}
+        image={siteSeo.image}
+        type="article"
+      />
       <div className="max-w-3xl mx-auto">
         <AnimatedReveal>
           <Link to="/blog" className="inline-flex items-center gap-2 text-[10px] uppercase font-bold tracking-widest text-green-400 hover:text-white transition-colors mb-12">
