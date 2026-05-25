@@ -221,10 +221,10 @@ export const agencyConfig = {
 
   blog: [
     {
-      id: "google-ranking-2024",
-      date: "2024-03-20",
+      id: "google-ranking-2026",
+      date: "2026-03-20",
       en: {
-        title: "How to Rank in Google in 2024",
+        title: "How to Rank in Google in 2026",
         desc: "Best practices for technical SEO, web development strategies, and ranking in modern search engines.",
         content: "Ranking on Google requires more than just keywords today. It demands robust web development practices, high speed, and a semantic HTML structure.\n\nFor Georgian businesses, strong SEO starts with clear service pages, local search intent, fast loading, and content that answers what customers actually search for: website development, online store creation, SEO, and business automation.\n\nEuropean-standard execution means clean code, fast interfaces, measurable conversions, and a platform that can grow with your company. Don't rely on heavy templates—build custom, performance-focused platforms."
       },
@@ -236,7 +236,7 @@ export const agencyConfig = {
     },
     {
       id: "why-need-web-developer",
-      date: "2024-03-15",
+      date: "2026-03-15",
       en: {
         title: "Why You Need a Professional Web Developer",
         desc: "Templates fail at scale. Discover why a dedicated website programmer is essential for serious businesses.",
@@ -250,7 +250,7 @@ export const agencyConfig = {
     },
     {
       id: "ai-in-web-development",
-      date: "2024-03-10",
+      date: "2026-03-10",
       en: {
         title: "Artificial Intelligence in Web Development",
         desc: "How AI automation is changing UI design and coding workflows.",
@@ -264,21 +264,21 @@ export const agencyConfig = {
     },
     {
       id: "cost-of-building-website",
-      date: "2024-03-05",
+      date: "202603-05",
       en: {
-        title: "How Much Does a Website Cost in 2024?",
+        title: "How Much Does a Website Cost in 2026?",
         desc: "Understanding the pricing models for custom web applications and e-commerce stores.",
         content: "The cost of building a website is similar to building a house—it depends entirely on the blueprint.\n\nCustom web development costs more upfront but generates exponentially higher ROI because it doesn't incur the endless technical debt of generic platforms."
       },
       ge: {
-        title: "რა ჯდება საიტის აწყობა 2024 წელს?",
+        title: "რა ჯდება საიტის აწყობა 2026 წელს?",
         desc: "ფასების ფორმირება, E-commerce მაღაზიებისა და პრემიუმ საიტების ღირებულება.",
         content: "საიტის ფასი დამოკიდებულია მის ფუნქციონალზე. სავიზიტო ვებ საიტის აწყობა უფრო ბიუჯეტურია, ვიდრე მრავალფუნქციური ონლაინ მაღაზიის ან SaaS პლატფორმის აწყობა.\n\nგახსოვდეთ, რომ იაფი საიტი ხშირად ნიშნავს დაკარგულ კლიენტებს. პროფესიონალური საიტების დამზადება ინვესტიციაა — ის თქვენს მაგივრად ყიდის 24 საათის განმავლობაში. ჩვენი სააგენტო შემოგთავაზებთ ზუსტ ხარჯთაღრიცხვას დეტალური ანალიზის შემდეგ."
       }
     },
     {
       id: "digital-agency-georgia",
-      date: "2024-02-28",
+      date: "2026-02-28",
       en: {
         title: "Choosing a Digital Agency vs Freelancer",
         desc: "Why businesses scaling up require the unified workflow of a dedicated digital agency.",
@@ -292,7 +292,7 @@ export const agencyConfig = {
     },
     {
       id: "ecommerce-guide",
-      date: "2024-02-20",
+      date: "2026-02-20",
       en: {
         title: "Definitive Guide to E-Commerce Scalability",
         desc: "Building online stores that handle massive traffic spikes without crashing.",
@@ -306,7 +306,7 @@ export const agencyConfig = {
     },
     {
       id: "speed-impact-on-sales",
-      date: "2024-02-12",
+      date: "2026-02-12",
       en: {
         title: "How Website Speed Impacts Sales (Directly)",
         desc: "Statistical analysis on conversion drop-offs due to latency.",
@@ -320,7 +320,7 @@ export const agencyConfig = {
     },
     {
       id: "react-nextjs-benefits",
-      date: "2024-02-05",
+      date: "2026-02-05",
       en: {
         title: "React vs Legacy Stacks",
         desc: "Why modern digital agencies exclusively use React and Next.js.",
@@ -334,7 +334,7 @@ export const agencyConfig = {
     },
     {
       id: "ui-ux-design-importance",
-      date: "2024-01-28",
+      date: "2026-01-28",
       en: {
         title: "The Anatomy of High-Converting UI/UX",
         desc: "Aesthetic is important, but frictionless user journeys generate revenue.",
@@ -348,7 +348,7 @@ export const agencyConfig = {
     },
     {
       id: "google-analytics-setup",
-      date: "2024-01-15",
+      date: "2026-01-15",
       en: {
         title: "Configuring Analytics for Accurate Tracking",
         desc: "Stop flying blind. How to set up Google Analytics 4 mapping accurately.",
