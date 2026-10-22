@@ -35,7 +35,7 @@ const projects = [
   {
     img: malerImg,
     name: "Maler Arbeit",
-    link: "https://github.com/akkk1/maler-arbeit",
+    link: "malerarbeiten.netlify.app",
     meta: "github.com/akkk1/maler-arbeit",
     type: "github",
     tags: ["Three.js", "Framer Motion", "WebGL"],
