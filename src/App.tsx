@@ -33,6 +33,7 @@ export default function App() {
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </Layout>
+        <Analytics />
       </BrowserRouter>
       <Analytics />
     </LangProvider>
